@@ -3,6 +3,7 @@ from tkinter import ttk
 from ttkthemes import ThemedTk
 import pandas as pd
 
+excel_file='Excel_example.xlsx'
 
 class DateEntry(tk.Entry):
     def __init__(self, parent, callback, *args, **kwargs):
@@ -48,7 +49,7 @@ class ExcelGUI:
 
         self.master.protocol("WM_DELETE_WINDOW", self.close_window)
 
-        self.df = pd.read_excel('Excel_example.xlsx', engine='openpyxl')
+        self.df = pd.read_excel(excel_file, engine='openpyxl')
         self.df['DATE'] = pd.to_datetime(self.df['DATE']).apply(lambda x: x.strftime('%d-%m-%Y'))
 
         self.top_frame = ttk.Frame(master)
@@ -109,12 +110,12 @@ class ExcelGUI:
         self.df = self.df.sort_index()
 
     def commit_changes(self):
-        self.df.to_excel(r'C:\Users\Kamil\Desktop\sg\DBaa.xlsx', index=False, engine='openpyxl')
-        self.df = pd.read_excel(r'C:\Users\Kamil\Desktop\sg\DBaa.xlsx', engine='openpyxl')
+        self.df.to_excel(excel_file, index=False, engine='openpyxl')
+        self.df = pd.read_excel(excel_file, engine='openpyxl')
         self.filter_table(None)
 
     def restart_changes(self):
-        self.df = pd.read_excel(r'C:\Users\Kamil\Desktop\sg\DBaa.xlsx', engine='openpyxl')
+        self.df = pd.read_excel(excel_file, engine='openpyxl')
         self.filter_table(None)
 
     def on_cell_click(self, event):
