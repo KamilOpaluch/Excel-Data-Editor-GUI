@@ -7,7 +7,7 @@ It comes with features such as filtering by specific values, adding new rows, co
 ![image](https://github.com/KamilOpaluch/Excel-Data-Editor-GUI/assets/142261174/b1a93d5c-f0ca-4b72-8540-7a06512b3c97)
 
 
-#Features
+## Features
 
 
 Dropdown Filter: Select a specific value from the dropdown to filter the displayed rows in the table.
@@ -20,7 +20,8 @@ Add Line: Insert a new row to the table.
 
 Restart Changes: Revert any changes made during the session and reload the Excel file.
 
-#Dependencies
+
+## Dependencies
 
 
 tkinter: For GUI development.
@@ -32,12 +33,13 @@ ttkthemes: For theming the GUI.
 openpyxl: As an engine to read/write Excel files.
 
 
-#Usage
+## Usage
 
 
 Place the Excel file (e.g., 'Excel_example.xlsx') in the same directory as the script.
 
-#Classes and Methods
+
+## Classes and Methods
 
 
 DateEntry: A custom tk.Entry widget to input dates in the format dd-mm-yyyy.
