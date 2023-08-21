@@ -67,7 +67,7 @@ on_cell_click: Handles cell click events to allow editing.
 finish_editing: Updates the table and dataframe after editing a cell.
 
 
-
+## Disclaimer
 All the code provided in this project is for educational or informational purposes only, and is not intended to be a substitute for professional advice. 
 The code is provided "AS IS" without warranty of any kind. 
 Use of the code is solely at your own risk.
